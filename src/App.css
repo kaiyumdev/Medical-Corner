@@ -1,15 +1,9 @@
-/* Loading.css */
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.banner{
+  background: url(../public/images/banner_bg.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   height: 100vh;
-  background-color: #f0f0f0;
-}
-
-.loading-ball {
-  width: 20px;
-  height: 20px;
-  background-color: #3498db;
-  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }

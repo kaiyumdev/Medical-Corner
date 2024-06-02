@@ -3,7 +3,7 @@ import Logo from "../../../public/images/Logo_1.png"
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-white">
+        <div className="navbar bg-white my-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = () => {
                     <li><a>Service</a></li>
                     <li><a>About</a></li>
                     <li><a>Contact</a></li>
-                    <li><a>Appointment</a></li>
+                    <li className='bg-customBlue rounded-lg'><a>Appointment</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
