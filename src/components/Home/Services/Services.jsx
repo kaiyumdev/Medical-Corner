@@ -8,7 +8,7 @@ const Services = ({services}) => {
 
     <div className="flex gap-16 justify-center space-x-4 flex-wrap">
        {
-        services.slice(0, 3).map((service) => <Service key={service.id} service={service}></Service>)
+        services?.slice(0, 3).map((service) => <Service key={service.id} service={service}></Service>)
        }
     </div>
     
