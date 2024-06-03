@@ -2,42 +2,42 @@
     "services": [
         {
             "id": 1,
-            "image": "images/ambulance_service.jpg",
+            "image": "/images/services/service1.webp",
             "title": "Emergency Transport",
             "name": "Ambulance Services",
             "description": "Emergency and non-emergency ambulance services available 24/7 to transport patients safely and promptly."
         },
         {
             "id": 2,
-            "image": "images/oxygen_on_wheel.jpg",
+            "image": "/images/services/service2.webp",
             "title": "Mobile Oxygen",
             "name": "Oxygen on Wheel",
             "description": "Mobile oxygen services providing oxygen therapy to patients in need during transit or at home."
         },
         {
             "id": 3,
-            "image": "images/pharmacy_on_clinic.jpg",
+            "image": "/images/services/service3.jpg",
             "title": "In-House Pharmacy",
             "name": "Pharmacy on Clinic",
             "description": "On-site pharmacy providing a wide range of prescription medications and over-the-counter drugs."
         },
         {
             "id": 4,
-            "image": "images/on_duty_doctors.jpg",
+            "image": "/images/services/service4.jpg",
             "title": "Round-the-Clock Care",
             "name": "On-duty Doctors",
             "description": "Qualified and experienced doctors available around the clock to attend to medical emergencies and routine check-ups."
         },
         {
             "id": 5,
-            "image": "images/24_7_emergency.jpg",
+            "image": "/images/services/service5.jpg",
             "title": "Always Available",
             "name": "24/7 Medical Emergency",
             "description": "Comprehensive emergency care services available at any time of the day or night to handle critical medical situations."
         },
         {
             "id": 6,
-            "image": "images/telemedicine_services.jpg",
+            "image": "/images/services/service6.jpg",
             "title": "Remote Consultations",
             "name": "Telemedicine Services",
             "description": "Remote consultations with healthcare professionals using video calls, phone calls, and online chat for non-urgent medical advice."
