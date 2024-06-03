@@ -6,6 +6,9 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Appointment from "../pages/Appointment";
 import ServiceDetails from "../components/Home/Services/ServiceDetails";
+import Services from "../components/Home/Services/Services";
+import DashboardLayout from "../layouts/DashboardLayout";
+import Dashboard from "../pages/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +20,10 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>,
                 loader: () => fetch("http://localhost:3000/services")
+            },
+            {
+                path: "/",
+                element: <Services></Services>,
             },
             {
                 path: "/services/:id",
@@ -34,6 +41,16 @@ export const router = createBrowserRouter([
             {
                 path: "/appointment",
                 element: <Appointment></Appointment>
+            }
+        ]
+    },
+    {
+        path: "dashboard",
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: "/dashboard",
+                element: <Dashboard></Dashboard>
             }
         ]
     }
