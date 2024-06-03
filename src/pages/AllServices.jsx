@@ -12,10 +12,10 @@ const AllServices = () => {
   return (
     <div className='flex justify-center gap-16 flex-wrap'>
     <div>
-    <ToastContainer />
+    {/* <ToastContainer /> */}
     </div>
     {
-        products?.map((service) => <SingleService key={service._id} service={service} onDelete={handleDeleteProduct}></SingleService>)
+        services?.map((service) => <SingleService key={service.id} service={service}></SingleService>)
     }
     <div>
    
