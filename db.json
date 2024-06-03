@@ -1,44 +1,75 @@
-[
-    {
-        "id": 1,
-        "image": "images/ambulance_service.jpg",
-        "title": "Emergency Transport",
-        "name": "Ambulance Services",
-        "description": "Emergency and non-emergency ambulance services available 24/7 to transport patients safely and promptly."
-    },
-    {
-        "id": 2,
-        "image": "images/oxygen_on_wheel.jpg",
-        "title": "Mobile Oxygen",
-        "name": "Oxygen on Wheel",
-        "description": "Mobile oxygen services providing oxygen therapy to patients in need during transit or at home."
-    },
-    {
-        "id": 3,
-        "image": "images/pharmacy_on_clinic.jpg",
-        "title": "In-House Pharmacy",
-        "name": "Pharmacy on Clinic",
-        "description": "On-site pharmacy providing a wide range of prescription medications and over-the-counter drugs."
-    },
-    {
-        "id": 4,
-        "image": "images/on_duty_doctors.jpg",
-        "title": "Round-the-Clock Care",
-        "name": "On-duty Doctors",
-        "description": "Qualified and experienced doctors available around the clock to attend to medical emergencies and routine check-ups."
-    },
-    {
-        "id": 5,
-        "image": "images/24_7_emergency.jpg",
-        "title": "Always Available",
-        "name": "24/7 Medical Emergency",
-        "description": "Comprehensive emergency care services available at any time of the day or night to handle critical medical situations."
-    },
-    {
-        "id": 6,
-        "image": "images/telemedicine_services.jpg",
-        "title": "Remote Consultations",
-        "name": "Telemedicine Services",
-        "description": "Remote consultations with healthcare professionals using video calls, phone calls, and online chat for non-urgent medical advice."
-    }
-]
+{
+    "services": [
+        {
+            "id": 1,
+            "image": "images/ambulance_service.jpg",
+            "title": "Emergency Transport",
+            "name": "Ambulance Services",
+            "description": "Emergency and non-emergency ambulance services available 24/7 to transport patients safely and promptly."
+        },
+        {
+            "id": 2,
+            "image": "images/oxygen_on_wheel.jpg",
+            "title": "Mobile Oxygen",
+            "name": "Oxygen on Wheel",
+            "description": "Mobile oxygen services providing oxygen therapy to patients in need during transit or at home."
+        },
+        {
+            "id": 3,
+            "image": "images/pharmacy_on_clinic.jpg",
+            "title": "In-House Pharmacy",
+            "name": "Pharmacy on Clinic",
+            "description": "On-site pharmacy providing a wide range of prescription medications and over-the-counter drugs."
+        },
+        {
+            "id": 4,
+            "image": "images/on_duty_doctors.jpg",
+            "title": "Round-the-Clock Care",
+            "name": "On-duty Doctors",
+            "description": "Qualified and experienced doctors available around the clock to attend to medical emergencies and routine check-ups."
+        },
+        {
+            "id": 5,
+            "image": "images/24_7_emergency.jpg",
+            "title": "Always Available",
+            "name": "24/7 Medical Emergency",
+            "description": "Comprehensive emergency care services available at any time of the day or night to handle critical medical situations."
+        },
+        {
+            "id": 6,
+            "image": "images/telemedicine_services.jpg",
+            "title": "Remote Consultations",
+            "name": "Telemedicine Services",
+            "description": "Remote consultations with healthcare professionals using video calls, phone calls, and online chat for non-urgent medical advice."
+        },
+        {
+            "id": 7,
+            "image": "images/laboratory_services.jpg",
+            "title": "Diagnostic Lab",
+            "name": "Laboratory Services",
+            "description": "Comprehensive lab services providing accurate and timely diagnostics to support treatment plans."
+        },
+        {
+            "id": 8,
+            "image": "images/radiology_services.jpg",
+            "title": "Advanced Imaging",
+            "name": "Radiology Services",
+            "description": "State-of-the-art imaging services including X-rays, MRIs, and CT scans for accurate diagnostics."
+        },
+        {
+            "id": 9,
+            "image": "images/dental_care.jpg",
+            "title": "Dental Care",
+            "name": "Dental Services",
+            "description": "Complete dental care services including routine check-ups, cleanings, and advanced dental treatments."
+        },
+        {
+            "id": 10,
+            "image": "images/physiotherapy_services.jpg",
+            "title": "Rehabilitation",
+            "name": "Physiotherapy Services",
+            "description": "Comprehensive physiotherapy services to aid recovery and improve mobility for patients with physical impairments."
+        }
+    ]
+    
+}
