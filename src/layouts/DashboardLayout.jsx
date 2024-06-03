@@ -9,10 +9,10 @@ const DashboardLayout = () => {
             <Link to={""}>Dashboard</Link>
           </li>
           <li className="border border-black p-4 text w-full">
-            <Link to={"/dashboard/allProducts"}>All Products</Link>
+            <Link to={"/dashboard/allProducts"}>All Service</Link>
           </li>
           <li className="border border-black p-4 text w-full">
-            <Link to={"/dashboard/addProduct"}>Add Product</Link>
+            <Link to={"/dashboard/addProduct"}>Add Service</Link>
           </li>
           <li className="border border-black p-4 text w-full">
             <Link to={"/"}>Home</Link>

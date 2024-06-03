@@ -9,6 +9,7 @@ import ServiceDetails from "../components/Home/Services/ServiceDetails";
 import Services from "../components/Home/Services/Services";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
+import AllServices from "../pages/AllServices";
 
 export const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path: "/dashboard/allServices",
+                element: <AllServices></AllServices>
             }
         ]
     }
