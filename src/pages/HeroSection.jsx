@@ -1,6 +1,4 @@
 import React from 'react'
-import BgBanner from "../../public/images/banner_bg.jpg"
-
 const HeroSection = () => {
     return (
         <div className="bg-[url('/images/banner_bg.jpg')]">
