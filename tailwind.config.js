@@ -9,6 +9,9 @@ export default {
       colors: {
         customBlue: '#00a6fb',
       },
+      colors: {
+        customLightBlue: '#e0f5ff',
+      },
       animation: {
         fadeInRight: 'fadeInRight 1s ease-in-out',
       },
