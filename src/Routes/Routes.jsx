@@ -11,13 +11,14 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
 import AllServices from "../pages/AllServices";
 import AddService from "../pages/AddService";
+import EditService from "../pages/EditService";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: <ErrorPage />,
-        children:[
+        children: [
             {
                 path: "/",
                 element: <Home></Home>,
@@ -30,8 +31,8 @@ export const router = createBrowserRouter([
             {
                 path: "/services/:id",
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`)
-              },
+                loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`)
+            },
             {
                 path: "/about",
                 element: <About></About>
@@ -61,6 +62,11 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/addService",
                 element: <AddService></AddService>
+            },
+            {
+                path: "/dashboard/allService/edit/:id",
+                element: <EditService></EditService>,
+                loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`)
             }
         ]
     }

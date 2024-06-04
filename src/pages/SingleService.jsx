@@ -19,10 +19,10 @@ const SingleService = ({service}) => {
           <button className="btn bg-indigo-500 text-white">
             <Link to={`/services/${id}`}>See Details</Link>
           </button>
-          {/* <button className="btn bg-green-600 text-white">
-            <Link to={`/dashboard/allProducts/edit/${_id}`}>Edit</Link>
+          <button className="btn bg-green-600 text-white">
+            <Link to={`/dashboard/allService/edit/${id}`}>Edit</Link>
           </button>
-          <button onClick={handleDelete} className="btn bg-red-500 text-white">
+          {/* <button onClick={handleDelete} className="btn bg-red-500 text-white">
            Delete
           </button> */}
         </div>
