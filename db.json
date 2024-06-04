@@ -1,75 +1,95 @@
 {
-    "services": [
-        {
-            "id": 1,
-            "image": "/images/services/service1.webp",
-            "title": "Emergency Transport",
-            "name": "Ambulance Services",
-            "description": "Emergency and non-emergency ambulance services available 24/7 to transport patients safely and promptly."
-        },
-        {
-            "id": 2,
-            "image": "/images/services/service2.webp",
-            "title": "Mobile Oxygen",
-            "name": "Oxygen on Wheel",
-            "description": "Mobile oxygen services providing oxygen therapy to patients in need during transit or at home."
-        },
-        {
-            "id": 3,
-            "image": "/images/services/service3.jpg",
-            "title": "In-House Pharmacy",
-            "name": "Pharmacy on Clinic",
-            "description": "On-site pharmacy providing a wide range of prescription medications and over-the-counter drugs."
-        },
-        {
-            "id": 4,
-            "image": "/images/services/service4.jpg",
-            "title": "Round-the-Clock Care",
-            "name": "On-duty Doctors",
-            "description": "Qualified and experienced doctors available around the clock to attend to medical emergencies and routine check-ups."
-        },
-        {
-            "id": 5,
-            "image": "/images/services/service5.jpg",
-            "title": "Always Available",
-            "name": "24/7 Medical Emergency",
-            "description": "Comprehensive emergency care services available at any time of the day or night to handle critical medical situations."
-        },
-        {
-            "id": 6,
-            "image": "/images/services/service6.jpg",
-            "title": "Remote Consultations",
-            "name": "Telemedicine Services",
-            "description": "Remote consultations with healthcare professionals using video calls, phone calls, and online chat for non-urgent medical advice."
-        },
-        {
-            "id": 7,
-            "image": "images/laboratory_services.jpg",
-            "title": "Diagnostic Lab",
-            "name": "Laboratory Services",
-            "description": "Comprehensive lab services providing accurate and timely diagnostics to support treatment plans."
-        },
-        {
-            "id": 8,
-            "image": "images/radiology_services.jpg",
-            "title": "Advanced Imaging",
-            "name": "Radiology Services",
-            "description": "State-of-the-art imaging services including X-rays, MRIs, and CT scans for accurate diagnostics."
-        },
-        {
-            "id": 9,
-            "image": "images/dental_care.jpg",
-            "title": "Dental Care",
-            "name": "Dental Services",
-            "description": "Complete dental care services including routine check-ups, cleanings, and advanced dental treatments."
-        },
-        {
-            "id": 10,
-            "image": "images/physiotherapy_services.jpg",
-            "title": "Rehabilitation",
-            "name": "Physiotherapy Services",
-            "description": "Comprehensive physiotherapy services to aid recovery and improve mobility for patients with physical impairments."
-        }
-    ]
-    
+  "services": [
+    {
+      "id": "1",
+      "image": "/images/services/service1.webp",
+      "title": "Emergency Transport",
+      "name": "Ambulance Services",
+      "description": "Emergency and non-emergency ambulance services available 24/7 to transport patients safely and promptly."
+    },
+    {
+      "id": "2",
+      "image": "/images/services/service2.webp",
+      "title": "Mobile Oxygen",
+      "name": "Oxygen on Wheel",
+      "description": "Mobile oxygen services providing oxygen therapy to patients in need during transit or at home."
+    },
+    {
+      "id": "3",
+      "image": "/images/services/service3.jpg",
+      "title": "In-House Pharmacy",
+      "name": "Pharmacy on Clinic",
+      "description": "On-site pharmacy providing a wide range of prescription medications and over-the-counter drugs."
+    },
+    {
+      "id": "4",
+      "image": "/images/services/service4.jpg",
+      "title": "Round-the-Clock Care",
+      "name": "On-duty Doctors",
+      "description": "Qualified and experienced doctors available around the clock to attend to medical emergencies and routine check-ups."
+    },
+    {
+      "id": "5",
+      "image": "/images/services/service5.jpg",
+      "title": "Always Available",
+      "name": "24/7 Medical Emergency",
+      "description": "Comprehensive emergency care services available at any time of the day or night to handle critical medical situations."
+    },
+    {
+      "id": "6",
+      "image": "/images/services/service6.jpg",
+      "title": "Remote Consultations",
+      "name": "Telemedicine Services",
+      "description": "Remote consultations with healthcare professionals using video calls, phone calls, and online chat for non-urgent medical advice."
+    },
+    {
+      "id": "7",
+      "image": "images/laboratory_services.jpg",
+      "title": "Diagnostic Lab",
+      "name": "Laboratory Services",
+      "description": "Comprehensive lab services providing accurate and timely diagnostics to support treatment plans."
+    },
+    {
+      "id": "8",
+      "image": "images/radiology_services.jpg",
+      "title": "Advanced Imaging",
+      "name": "Radiology Services",
+      "description": "State-of-the-art imaging services including X-rays, MRIs, and CT scans for accurate diagnostics."
+    },
+    {
+      "id": "9",
+      "image": "images/dental_care.jpg",
+      "title": "Dental Care",
+      "name": "Dental Services",
+      "description": "Complete dental care services including routine check-ups, cleanings, and advanced dental treatments."
+    },
+    {
+      "id": "10",
+      "image": "images/physiotherapy_services.jpg",
+      "title": "Rehabilitation",
+      "name": "Physiotherapy Services",
+      "description": "Comprehensive physiotherapy services to aid recovery and improve mobility for patients with physical impairments."
+    },
+    {
+      "id": "11",
+      "title": "Frontend Engineer",
+      "name": "Medical",
+      "image": "C:\\fakepath\\pexels-tima-miroshnichenko-6011570.jpg",
+      "description": "It's important"
+    },
+    {
+      "id": "12",
+      "title": "Medical Emergency",
+      "name": "Medical",
+      "image": "https://www.freepik.com/free-photo/medicine-uniform-healthcare-medical-workers-day-concept_40312203.htm#fromView=search&page=1&position=1&uuid=ed3f326c-8fec-42ae-825d-f77dbf38c6be",
+      "description": "It's important"
+    },
+    {
+      "id": "12",
+      "title": "Medical Emergency",
+      "name": "Medical",
+      "image": "https://img.freepik.com/free-psd/healthcare-consultant-banner-square-flyer-social-media-post-template_202595-588.jpg?t=st=1717476986~exp=1717480586~hmac=3237006d9e62fcc4ff3ac2f773eb9e9a2e5f7b1381596c85d1c4bc2e0b0eea9a&w=826",
+      "description": "It's important"
+    }
+  ]
 }
