@@ -31,10 +31,14 @@ const AuthProvider = ({children}) => {
     return signInWithEmailAndPassword(auth, email, password)
   }
 
-  const logOut = async () => {
-    try {
-      await signOut(auth);
-    } catch (error) { }
+  // const logOut = async () => {
+  //   try {
+  //     await signOut(auth);
+  //   } catch (error) { }
+  // }
+
+  const logOut = () => {
+    return signOut(auth).then(() => setUser(null))
   }
 
   useEffect(() => {

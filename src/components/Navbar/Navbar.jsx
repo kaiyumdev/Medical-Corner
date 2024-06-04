@@ -52,11 +52,11 @@ const Navbar = () => {
                     )
                 }
                 {
-                    user && <div className="avatar">
-                        <div className="w-12 rounded-full border-2 border-black">
-                            <img src={user?.photoURL || "/public/placeholder.jpg"} />
-                        </div>
+                    user &&   <div className="avatar">
+                    <div className="w-12 rounded-full border-2 border-black">
+                      <img src={user?.photoURL || "/public/placeholder.jpg"} />
                     </div>
+                  </div>
                 }
             </div>
         </div>
