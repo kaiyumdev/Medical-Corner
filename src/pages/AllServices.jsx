@@ -9,13 +9,19 @@ const AllServices = () => {
         .then((res) => res.json())
         .then((data) => setServices(data))
     },[])
+
+
+    const handleDeleteService = (id) => {
+      setServices(services.filter((service) => service.id !==id))
+      // toast("Delete shoe successfully!");
+  }
   return (
     <div className='flex justify-center gap-16 flex-wrap'>
     <div>
     {/* <ToastContainer /> */}
     </div>
     {
-        services?.map((service) => <SingleService key={service.id} service={service}></SingleService>)
+        services?.map((service) => <SingleService key={service.id} service={service} onDelete={handleDeleteService}></SingleService>)
     }
     <div>
    

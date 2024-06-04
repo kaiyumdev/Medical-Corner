@@ -71,20 +71,6 @@
       "description": "Comprehensive physiotherapy services to aid recovery and improve mobility for patients with physical impairments."
     },
     {
-      "id": "11",
-      "title": "Frontend Engineer with Medical",
-      "name": "Medical",
-      "image": "pexels-tima-miroshnichenko-6011570.jpg",
-      "description": "It's important"
-    },
-    {
-      "id": "12",
-      "title": "Medical Emergency",
-      "name": "Medical",
-      "image": "https://www.freepik.com/free-photo/medicine-uniform-healthcare-medical-workers-day-concept_40312203.htm#fromView=search&page=1&position=1&uuid=ed3f326c-8fec-42ae-825d-f77dbf38c6be",
-      "description": "It's important"
-    },
-    {
       "id": "12",
       "title": "Medical Emergency",
       "name": "Medical",
