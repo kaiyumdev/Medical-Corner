@@ -1,14 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+// import GoogleLogin from "../components/Login-Registration/GoogleLogin";
+import { useState } from "react";
 import useAuth from "../hooks/useAuth";
-import { useEffect, useState } from "react";
 
-const Registration = () => {
+const Registrations = () => {
   const {createUser, user} = useAuth();
     const [passMatch, setPassMatch] = useState(true)
 
-    let navigate = useNavigate();
-    let location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    // let navigate = useNavigate();
+    // let location = useLocation();
+    // let from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -22,15 +23,15 @@ const Registration = () => {
         setPassMatch(false)
     }
     if(password === confirm_password){
-      createUser(name, email, password)
+      createUser(email, password)
     }
     console.log(name, email, password, confirm_password)
   }
-  useEffect(() => {
-    if(user){
-      navigate(from, {replace: true})
-    }
-  },[])
+//   useEffect(() => {
+//     if(user){
+//       navigate(from, {replace: true})
+//     }
+//   },[user, navigate, from])
   
   return (
     <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
@@ -113,10 +114,10 @@ const Registration = () => {
               {/* <GoogleLogin></GoogleLogin> */}
             </div>
             <div className="mt-6">
-              {/* <p>
+              <p>
                 New Here?{"  "}
                 <Link to="/login" className="text-red-500">Login</Link>
-              </p> */}
+              </p>
             </div>
           </div>
         </div>
@@ -125,4 +126,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Registrations;
