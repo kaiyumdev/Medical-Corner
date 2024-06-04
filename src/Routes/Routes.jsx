@@ -14,6 +14,7 @@ import AddService from "../pages/AddService";
 import EditService from "../pages/EditService";
 import Registration from "../pages/Registration";
 import Login from "../pages/Login";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -63,7 +64,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/dashboard",
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
             {
                 path: "/dashboard/allServices",
