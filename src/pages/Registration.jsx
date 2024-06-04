@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import GoogleLogin from "../Shared/GoogleLogin";
+import GithubLogin from "../Shared/GithubLogin";
 
 const Registrations = () => {
   const {createUser, user} = useAuth();
@@ -112,6 +113,9 @@ const Registrations = () => {
             </div>
             <div className="mt-6">
                 <GoogleLogin></GoogleLogin>
+            </div>
+            <div className="mt-6">
+                <GithubLogin></GithubLogin>
             </div>
             <div className="mt-6">
               <p>

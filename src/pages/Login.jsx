@@ -74,6 +74,9 @@ const Login = () => {
               <GoogleLogin></GoogleLogin>
             </div>
             <div className="mt-6">
+              <GithubLogin></GithubLogin>
+            </div>
+            <div className="mt-6">
               <p>
                 New Here?{"  "}
                 <Link to="/register" className="text-red-500">Register</Link>
