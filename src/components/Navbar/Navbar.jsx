@@ -1,8 +1,15 @@
 import React from 'react'
 // import Logo from "../../../pubLinkc/images/Logo_1.png"
 import { Link } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth';
 
 const Navbar = () => {
+    const { logOut, user } = useAuth();
+    console.log(user)
+
+    const handleLogout = async () => {
+        await logOut()
+    }
     return (
         <div className="navbar bg-white my-3 px-10">
             <div className="navbar-start">
@@ -16,7 +23,6 @@ const Navbar = () => {
                         <li><Link to={"/about"}>About</Link></li>
                         <li><Link to={"/contact"}>Contact</Link> </li>
                         <li><Link className='bg-customBlue rounded-lg' to={"/appointment"}>Appointment</Link></li>
-                        <li><Link to={"/registration"}>Registration</Link></li>
                     </ul>
                 </div>
                 <Link className="btn btn-ghost text-xl">
@@ -30,12 +36,28 @@ const Navbar = () => {
                     <li><Link to={"/about"}>About</Link></li>
                     <li><Link to={"/contact"}>Contact</Link> </li>
                     <li><Link className='bg-customBlue rounded-lg' to={"/appointment"}>Appointment</Link></li>
-                    <li><Link to={"/registration"}>Registration</Link></li>
 
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end space-x-2">
+                {user ? (
+                    <button
+                        onClick={handleLogout}
+                        className="btn bg-red-500 text-white hidden lg:block"
+                    >
+                        Logout
+                    </button>
+                ) :
+                    (<Link to={"/registration"}>Registration</Link>
+                    )
+                }
+                {
+                    user && <div className="avatar">
+                        <div className="w-12 rounded-full border-2 border-black">
+                            <img src={user?.photoURL || "/public/placeholder.jpg"} />
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     )

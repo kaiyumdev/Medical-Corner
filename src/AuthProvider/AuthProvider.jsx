@@ -31,8 +31,10 @@ const AuthProvider = ({children}) => {
     return signInWithEmailAndPassword(auth, email, password)
   }
 
-  const logOut = async() => {
-    return await signOut(auth).then(() => setUser(null))
+  const logOut = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) { }
   }
 
   useEffect(() => {

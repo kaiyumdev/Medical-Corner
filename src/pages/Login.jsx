@@ -1,14 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import GoogleLogin from "../components/Login-Registration/GoogleLogin";
 import useAuth from "../hooks/useAuth";
 import GoogleLogin from "../Shared/GoogleLogin";
-// import { useEffect } from "react";
+import { useEffect } from "react";
+import GithubLogin from "../Shared/GithubLogin";
 
 const Login = () => {
   const { signIn, user } = useAuth()
-//   let navigate = useNavigate();
-//   let location = useLocation();
-//   let from = location.state?.from?.pathname || "/";
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -20,11 +20,11 @@ const Login = () => {
     await signIn(email, password)
   }
 
-//   useEffect(() => {
-//     if(user){
-//       navigate(from, {replace: true})
-//     }
-//   },[user, navigate, from])
+  useEffect(() => {
+    if(user){
+      navigate(from, {replace: true})
+    }
+  },[user, navigate, from])
   return (
     <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
