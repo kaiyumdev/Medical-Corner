@@ -12,6 +12,7 @@ import Dashboard from "../pages/Dashboard";
 import AllServices from "../pages/AllServices";
 import AddService from "../pages/AddService";
 import EditService from "../pages/EditService";
+import Registration from "../pages/Registration";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path: "/appointment",
                 element: <Appointment></Appointment>
+            },
+            {
+                path: "/registration",
+                element: <Registration></Registration>
             }
         ]
     },

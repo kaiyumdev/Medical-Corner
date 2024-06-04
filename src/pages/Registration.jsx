@@ -1,9 +1,8 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import GoogleLogin from "../components/Login-Registration/GoogleLogin";
-import { useState } from "react";
 import useAuth from "../hooks/useAuth";
+import { useEffect, useState } from "react";
 
-const Registrations = () => {
+const Registration = () => {
   const {createUser, user} = useAuth();
     const [passMatch, setPassMatch] = useState(true)
 
@@ -14,6 +13,7 @@ const Registrations = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirm_password = form.confirm_password.value;
@@ -22,15 +22,15 @@ const Registrations = () => {
         setPassMatch(false)
     }
     if(password === confirm_password){
-      createUser(email, password)
+      createUser(name, email, password)
     }
-    console.log(email, password, confirm_password)
+    console.log(name, email, password, confirm_password)
   }
   useEffect(() => {
     if(user){
       navigate(from, {replace: true})
     }
-  },[user, navigate, from])
+  },[])
   
   return (
     <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
@@ -45,6 +45,18 @@ const Registrations = () => {
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div className="card-body">
+          <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="name"
+                className="input input-bordered"
+                name="name"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -98,13 +110,13 @@ const Registrations = () => {
               <button className="btn btn-primary">Register</button>
             </div>
             <div className="mt-6">
-              <GoogleLogin></GoogleLogin>
+              {/* <GoogleLogin></GoogleLogin> */}
             </div>
             <div className="mt-6">
-              <p>
+              {/* <p>
                 New Here?{"  "}
                 <Link to="/login" className="text-red-500">Login</Link>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -113,4 +125,4 @@ const Registrations = () => {
   );
 };
 
-export default Registrations;
+export default Registration;

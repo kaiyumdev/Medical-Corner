@@ -15,7 +15,8 @@ const Navbar = () => {
                         <li> <Link to={"/dashboard"}>Dashboard</Link></li>
                         <li><Link to={"/about"}>About</Link></li>
                         <li><Link to={"/contact"}>Contact</Link> </li>
-                        <li><Link to={"/appointment"}>Appointment</Link></li>
+                        <li><Link className='bg-customBlue rounded-lg' to={"/appointment"}>Appointment</Link></li>
+                        <li><Link to={"/registration"}>Registration</Link></li>
                     </ul>
                 </div>
                 <Link className="btn btn-ghost text-xl">
@@ -29,6 +30,8 @@ const Navbar = () => {
                     <li><Link to={"/about"}>About</Link></li>
                     <li><Link to={"/contact"}>Contact</Link> </li>
                     <li><Link className='bg-customBlue rounded-lg' to={"/appointment"}>Appointment</Link></li>
+                    <li><Link to={"/registration"}>Registration</Link></li>
+
                 </ul>
             </div>
             <div className="navbar-end">
