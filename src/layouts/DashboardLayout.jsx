@@ -10,7 +10,7 @@ const DashboardLayout = () => {
         <ul>
           <li className="border border-black p-4 text w-full flex-col items-center">
             <Link to={"/dashboard/profile"}>
-              <Profile></Profile>
+              <Profile>Profile</Profile>
             </Link>
           </li>
           <li className="border border-black p-4 text w-full">

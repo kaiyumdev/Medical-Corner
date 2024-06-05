@@ -6,7 +6,6 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Appointment from "../pages/Appointment";
 import ServiceDetails from "../components/Home/Services/ServiceDetails";
-import Services from "../components/Home/Services/Services";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
 import AllServices from "../pages/AllServices";
@@ -16,7 +15,7 @@ import Login from "../pages/Login";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import EditService from "../pages/EditService"
 import Profile from "../pages/Profile/Profile";
-// import EditProfile from "../pages/Profile/EditProfile";
+import EditProfile from "../pages/Profile/EditProfile";
 
 export const router = createBrowserRouter([
     {
@@ -68,10 +67,11 @@ export const router = createBrowserRouter([
                 path: "/dashboard/profile",
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
             },
-            // {
-            //     path: "/dashboard/profile/edit/:id",
-            //     element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>
-            // },
+            {
+                path: "/dashboard/profile/edit/:id",
+                element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/user/get/${params.id}`)
+            },
             {
                 path: "/dashboard/allServices",
                 element: <AllServices></AllServices>
