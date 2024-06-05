@@ -7,7 +7,7 @@ const Profile = () => {
     const [userInfo, setUserInfo] = useState();
 
     useEffect(() => {
-        fetch(`https://medical-corner-server.vercel.app/user/${user?.email}`)
+        fetch(`https://medical-corner-server.onrender.com//user/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setUserInfo(data));
     }, [user]);
