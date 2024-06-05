@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 
 const EditService = () => {
     const editService = useLoaderData()
@@ -26,7 +26,7 @@ const EditService = () => {
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {
             console.log(data)
-            toast("Edit shoes successfully!");
+            toast("Edit service successfully!");
         })
     }
     return (
