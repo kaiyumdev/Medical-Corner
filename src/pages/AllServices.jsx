@@ -7,7 +7,7 @@
 //   const [services, setServices] = useState();
 
 //   useEffect(() => {
-//     fetch("https://medical-corner-server.onrender.com//services")
+//     fetch("https://medical-corner-server.onrender.com/services")
 //     .then((res) => res.json())
 //     .then((data) => setServices(data))
 // },[])
@@ -44,7 +44,7 @@ const AllServices = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch("https://medical-corner-server.onrender.com//services")
+    fetch("https://medical-corner-server.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

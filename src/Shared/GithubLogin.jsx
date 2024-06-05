@@ -13,7 +13,7 @@ const GithubLogin = () => {
                 email: data?.user?.email,
                 name: data?.user?.displayName,
             }
-            fetch("https://medical-corner-server.onrender.com//user",{
+            fetch("https://medical-corner-server.onrender.com/user",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

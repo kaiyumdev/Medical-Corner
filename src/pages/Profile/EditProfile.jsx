@@ -22,7 +22,7 @@ const EditProfile = () => {
       };
   
       fetch(
-        `https://medical-corner-server.onrender.com//user/${data?.email}`,
+        `https://medical-corner-server.onrender.com/user/${data?.email}`,
         {
           method: "PATCH",
           headers: {

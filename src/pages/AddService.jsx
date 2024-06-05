@@ -12,7 +12,7 @@ const AddService = () => {
         const description =  form.description.value;
         const data = {title, name, image, description}
 
-        await fetch("https://medical-corner-server.onrender.com//services", {
+        await fetch("https://medical-corner-server.onrender.com/services", {
             method: "POST",
             headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
             body: JSON.stringify(data)

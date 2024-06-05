@@ -26,12 +26,12 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("https://medical-corner-server.onrender.com//services")
+                loader: () => fetch("https://medical-corner-server.onrender.com/services")
             },
             {
                 path: "/services/:id",
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com//services/${params.id}`)
+                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
               },
             {
                 path: "/about",
@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/profile/edit/:id",
                 element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>,
-                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com//user/get/${params.id}`)
+                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com/user/get/${params.id}`)
             },
             {
                 path: "/dashboard/allServices",
@@ -83,7 +83,7 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/allService/edit/:id",
                 element: <EditService></EditService>,
-                loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com//services/${params.id}`)
+                loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
             }
         ]
     }

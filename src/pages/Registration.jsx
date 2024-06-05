@@ -31,7 +31,7 @@ const Registrations = () => {
                 email: data?.user?.email,
                 name: name,
             }
-            fetch("https://medical-corner-server.onrender.com//user",{
+            fetch("https://medical-corner-server.onrender.com/user",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
