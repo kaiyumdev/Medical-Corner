@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Service = ({service}) => {
   const {_id, title, name, description, image} = service
-    console.log(title, name , description, image)
   return (
     <div className="card w-96 bg-base-100 shadow-xl p-5">
       <figure>

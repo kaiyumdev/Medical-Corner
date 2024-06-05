@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EditService = () => {
     const editService = useLoaderData()

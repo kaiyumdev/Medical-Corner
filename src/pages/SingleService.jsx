@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 const SingleService = ({service, onDelete}) => {
     const {_id, title, image, name, description} = service;
 
-    // const handleDelete = async() => {
-    //   // alert("Ary you want to delete this?")
-    //   await fetch(`http://localhost:5000/services/${_id}`, {
-    //     method:"DELETE"
-    //   }).then((res) => res.json()).then((data) => {
-    //     console.log(data)
-    //     onDelete(id)
-    //   })
-    // }
+    const handleDelete = async() => {
+      // alert("Ary you want to delete this?")
+      await fetch(`http://localhost:5000/services/${_id}`, {
+        method:"DELETE"
+      }).then((res) => res.json()).then((data) => {
+        console.log(data)
+        onDelete(_id)
+      })
+    }
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl p-5">
@@ -33,9 +33,9 @@ const SingleService = ({service, onDelete}) => {
           <button className="btn bg-green-600 text-white">
             <Link to={`/dashboard/allService/edit/${_id}`}>Edit</Link>
           </button>
-          {/* <button onClick={handleDelete} className="btn bg-red-500 text-white">
+          <button onClick={handleDelete} className="btn bg-red-500 text-white">
            Delete
-          </button> */}
+          </button>
         </div>
       </div>
     </div>
