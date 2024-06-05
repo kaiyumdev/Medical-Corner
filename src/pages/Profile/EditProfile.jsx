@@ -5,12 +5,10 @@ const EditProfile = () => {
     const data = useLoaderData();
 
     const handleSubmit = (e) => {
+        const token = localStorage.getItem('token')
       e.preventDefault();
-  
       const form = e.target;
-  
       const name = form.name.value;
-  
       const age = form.age.value;
       const mobileNumber = form.mobileNumber.value;
   
@@ -27,6 +25,8 @@ const EditProfile = () => {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
+            Auhthorization: `Bearer ${token}`
+            
           },
           body: JSON.stringify(userData),
         }

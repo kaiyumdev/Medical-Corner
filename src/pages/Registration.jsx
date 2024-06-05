@@ -13,6 +13,7 @@ const Registrations = () => {
     let from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
+    const token = localStorage.getItem('token')
     e.preventDefault()
     const form = e.target;
     const name = form.name.value;
@@ -35,6 +36,7 @@ const Registrations = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Auhthorization: `Bearer ${token}`
                 },
                 body: JSON.stringify(userInfo)
             }).then((data) => console.log(data))

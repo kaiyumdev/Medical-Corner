@@ -19,12 +19,6 @@ const Service = ({service}) => {
           <button className="btn bg-indigo-500 text-white">
             <Link to={`/services/${_id}`}>See Details</Link>
           </button>
-          {/* <button className="btn bg-green-600 text-white">
-            <Link to={`/dashboard/allServices/edit/${_id}`}>Edit</Link>
-          </button>
-          <button onClick={handleDelete} className="btn bg-red-500 text-white">
-           Delete
-          </button> */}
         </div>
       </div>
     </div>

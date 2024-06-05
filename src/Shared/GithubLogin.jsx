@@ -5,6 +5,7 @@ import useAuth from '../hooks/useAuth';
 const GithubLogin = () => {
   const {githubLogin} = useAuth();
   const handleGoogleSingIn = () => {
+    const token = localStorage.getItem('token')
     githubLogin()
     .then((data) => {
       console.log(data)
@@ -17,6 +18,7 @@ const GithubLogin = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Auhthorization: `Bearer ${token}`
                 },
                 body: JSON.stringify(userInfo)
             }).then((data) => console.log(data))

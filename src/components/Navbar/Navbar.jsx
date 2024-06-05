@@ -1,5 +1,4 @@
 import React from 'react'
-// import Logo from "../../../pubLinkc/images/Logo_1.png"
 import { Link } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth';
 
