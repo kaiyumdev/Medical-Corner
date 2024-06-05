@@ -1,8 +1,66 @@
-# React + Vite
+# Medical Corner App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Medical Corner is a comprehensive healthcare application designed to connect patients with healthcare services efficiently. This app provides a platform for patients to schedule appointments, access medical records, consult with doctors, and manage their healthcare needs in one place.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Appointment Scheduling**: Book, reschedule, and cancel appointments with healthcare providers.
+- **Medical Records**: Access and manage personal medical records securely.
+- **Doctor Consultation**: Consult with doctors via chat or video call.
+- **Prescription Management**: View and manage prescriptions online.
+- **Health Tips**: Receive personalized health tips and notifications.
+- **Emergency Services**: Quick access to emergency contacts and services.
+
+## Installation
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+- MongoDB (for the backend)
+
+
+### Frontend
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/kaiyumdev/Medical-Corner
+    ```
+2. Navigate to the frontend directory:
+    ```bash
+    cd medical-corner-frontend
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+4. Configure the environment variables:
+    Create a `.env` file in the root of the frontend directory and add the following:
+    ```env
+    REACT_APP_API_URL=http://localhost:5000
+    ```
+5. Start the frontend development server:
+    ```bash
+    npm start
+    ```
+
+## Usage
+
+1. Register as a new user or log in with existing credentials.
+2. Navigate through the app to book appointments, consult with doctors, and manage your medical records.
+3. Use the prescription management feature to view and manage your prescriptions.
+4. Access emergency services and health tips as needed.
+
+## Contributing
+
+We welcome contributions to the Medical Corner app. Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+## Contact
+
+For any inquiries or support, please contact us at abdulkaiyum.fahim@gmail.com.
