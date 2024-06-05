@@ -2,12 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const SingleService = ({service, onDelete}) => {
+  const token = localStorage.getItem('token')
     const {_id, title, image, name, description} = service;
 
     const handleDelete = async() => {
       // alert("Ary you want to delete this?")
       await fetch(`http://localhost:5000/services/${_id}`, {
-        method:"DELETE"
+        method:"DELETE",
+        headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
       }).then((res) => res.json()).then((data) => {
         console.log(data)
         onDelete(_id)

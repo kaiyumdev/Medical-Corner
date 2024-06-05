@@ -13,6 +13,7 @@ const EditService = () => {
     const [image, setImage] = useState(editService.image)
 
     const handleSubmit = async (e) => {
+        const token = localStorage.getItem('token')
         e.preventDefault()
         // alert("Are you want to Edit shoe")
         const form = e.target;
@@ -23,7 +24,10 @@ const EditService = () => {
         const data = {title, name, description, image }
         await fetch(`http://localhost:5000/services/${editService._id}`, {
             method: "PATCH",
-            headers: {"Content-type": "application/json"},
+            headers: {
+                "Content-type": "application/json", 
+                Auhthorization: `Bearer ${token}`
+            },
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {
             console.log(data)

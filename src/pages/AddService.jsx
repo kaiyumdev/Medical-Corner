@@ -2,6 +2,7 @@ import React from 'react'
 
 const AddService = () => {
     const handleSubmit = async(e) => {
+        const token = localStorage.getItem('token')
         e.preventDefault()
         // alert("Are you want to add product")
         const form = e.target;
@@ -13,7 +14,7 @@ const AddService = () => {
 
         await fetch("http://localhost:5000/services", {
             method: "POST",
-            headers:{ "Content-type": "application/json"},
+            headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {
             console.log(data)
