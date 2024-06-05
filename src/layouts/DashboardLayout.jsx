@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-// import Profile from "../pages/Profile/Profile";
+import Profile from "../pages/Profile/Profile";
 
 const DashboardLayout = () => {
   const { user } = useAuth()
@@ -8,11 +8,11 @@ const DashboardLayout = () => {
     <div className="grid grid-cols-12">
       <div className="col-span-2 bg-customLightBlue min-h-screen p-12">
         <ul>
-          {/* <li className="border border-black p-4 text w-full flex-col items-center">
+          <li className="border border-black p-4 text w-full flex-col items-center">
             <Link to={"/dashboard/profile"}>
               <Profile></Profile>
             </Link>
-          </li> */}
+          </li>
           <li className="border border-black p-4 text w-full">
             <Link to={""}>Dashboard</Link>
           </li>

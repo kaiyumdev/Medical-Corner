@@ -15,7 +15,7 @@ import Registration from "../pages/Registration";
 import Login from "../pages/Login";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import EditService from "../pages/EditService"
-// import Profile from "../pages/Profile/Profile";
+import Profile from "../pages/Profile/Profile";
 // import EditProfile from "../pages/Profile/EditProfile";
 
 export const router = createBrowserRouter([
@@ -64,10 +64,10 @@ export const router = createBrowserRouter([
                 path: "/dashboard",
                 element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
-            // {
-            //     path: "/dashboard/profile",
-            //     element: <PrivateRoute><Profile></Profile></PrivateRoute>
-            // },
+            {
+                path: "/dashboard/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
             // {
             //     path: "/dashboard/profile/edit/:id",
             //     element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>
