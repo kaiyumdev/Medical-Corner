@@ -25,7 +25,19 @@ const Registrations = () => {
     }
     if(password === confirm_password){
       createUser(email, password).then((data) => {
-   
+        if(data?.user?.email){
+            const userInfo = {
+                email: data?.user?.email,
+                name: name,
+            }
+            fetch("http://localhost:5000/user",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(userInfo)
+            }).then((data) => console.log(data))
+        }
       })
     }
     console.log(name, email, password, confirm_password)
