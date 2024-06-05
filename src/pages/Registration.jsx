@@ -5,145 +5,114 @@ import GoogleLogin from "../Shared/GoogleLogin";
 import GithubLogin from "../Shared/GithubLogin";
 
 const Registrations = () => {
-  const {createUser, user} = useAuth();
-    const [passMatch, setPassMatch] = useState(true)
+  const { createUser, user } = useAuth();
+  const [passMatch, setPassMatch] = useState(true);
 
-    let navigate = useNavigate();
-    let location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
-    const token = localStorage.getItem('token')
-    e.preventDefault()
+    const token = localStorage.getItem('token');
+    e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirm_password = form.confirm_password.value;
 
-    if(password !==confirm_password){
-        setPassMatch(false)
+    if (password !== confirm_password) {
+      setPassMatch(false);
+      return;
     }
-    if(password === confirm_password){
+    if (password === confirm_password) {
       createUser(email, password).then((data) => {
-        console.log(data)
-        if(data?.user?.email){
-            const userInfo = {
-                email: data?.user?.email,
-                name: name,
-            }
-            fetch("https://medical-corner-server.onrender.com/user",{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Auhthorization: `Bearer ${token}`
-                },
-                body: JSON.stringify(userInfo)
-            }).then((data) => console.log(data))
+        if (data?.user?.email) {
+          const userInfo = {
+            email: data?.user?.email,
+            name: name,
+          };
+          fetch("https://medical-corner-server.onrender.com/user", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`
+            },
+            body: JSON.stringify(userInfo)
+          }).then((data) => console.log(data));
         }
-      })
+      });
     }
-    console.log(name, email, password, confirm_password)
-  }
+  };
+
   useEffect(() => {
-    if(user){
-      navigate(from, {replace: true})
+    if (user) {
+      navigate(from, { replace: true });
     }
-  },[user, navigate, from])
-  
+  }, [user, navigate, from]);
+
   return (
-    <form onSubmit={handleSubmit} className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-        </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
-          <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="name"
-                className="input input-bordered"
-                name="name"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                name="email"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                name="password"
-                required
-              />
-                         
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Confirm Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                className="input input-bordered"
-                name="confirm_password"
-                required
-              />
-            </div>
-            {
-                !passMatch && (
-                    <div className="my-2">
-                        <p className="text-red-500">Password doesn't match!</p>
-                    </div>
-                )
-            }
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
-            </div>
-            <div className="mt-6">
-                <GoogleLogin></GoogleLogin>
-            </div>
-            <div className="mt-6">
-                <GithubLogin></GithubLogin>
-            </div>
-            <div className="mt-6">
-              <p>
-                New Here?{"  "}
-                <Link to="/login" className="text-red-500">Login</Link>
-              </p>
-            </div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-300 to-blue-400">
+      <div className="w-full max-w-lg bg-gray-100 rounded-lg shadow-xl p-8 md:px-12 md:py-8 lg:px-16 lg:py-10">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Register Now!</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-gray-800">Name</label>
+            <input
+              type="text"
+              placeholder="Name"
+              className="input input-bordered rounded-lg w-full px-4 py-2 text-gray-900"
+              name="name"
+              required
+            />
           </div>
-        </div>
+          <div>
+            <label className="block text-gray-800">Email</label>
+            <input
+              type="email"
+              placeholder="Email"
+              className="input input-bordered rounded-lg w-full px-4 py-2 text-gray-900"
+              name="email"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-gray-800">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              className="input input-bordered rounded-lg w-full px-4 py-2 text-gray-900"
+              name="password"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-gray-800">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              className="input input-bordered rounded-lg w-full px-4 py-2 text-gray-900"
+              name="confirm_password"
+              required
+            />
+          </div>
+          {!passMatch && (
+            <div className="text-red-500 text-center">Passwords don't match!</div>
+          )}
+          <button className="btn bg-gray-800 hover:bg-gray-900 text-white w-full rounded-lg py-2 transition duration-300">Register</button>
+          <div className="text-center">
+            <GoogleLogin />
+          </div>
+          <div className="text-center">
+            <GithubLogin />
+          </div>
+          <div className="text-center text-gray-800">
+            Already have an account?{" "}
+            <Link to="/login" className="text-blue-500 font-bold">Login</Link>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   );
 };
 
