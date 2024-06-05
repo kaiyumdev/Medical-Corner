@@ -32,14 +32,14 @@ const Helpline = () => {
                 <span className="text-blue-500 text-xl mr-2"><FaPhoneAlt aria-hidden="true" /></span>
                 <div className="helpline_contact_text">
                   <p>Phone Number</p>
-                  <a href="tel:123456789" className="text-blue-500">+880 13 2525 065</a>
+                  <a href="tel:123456789" className="text-blue-500">+880 1783783485</a>
                 </div>
               </li>
               <li className="flex items-center mb-4">
                 <span className="text-blue-500 text-xl mr-2"><FaCommentAlt aria-hidden="true" /></span>
                 <div className="helpline_contact_text">
                   <p>Quick Your Email</p>
-                  <a href="mailto:help.info@gmail.com" className="text-blue-500">help.info@gmail.com</a>
+                  <a href="mailto:help.info@gmail.com" className="text-blue-500">abdulkaiyum.fahim@gmail.com</a>
                 </div>
               </li>
             </ul>
