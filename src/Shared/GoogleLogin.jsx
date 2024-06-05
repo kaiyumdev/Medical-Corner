@@ -5,7 +5,21 @@ import useAuth from '../hooks/useAuth';
 const GoogleLogin = () => {
   const {googleLogin} = useAuth();
   const handleGoogleSingIn = () => {
-    googleLogin()
+    googleLogin().then((data) => {
+        if(data?.user?.displayName){
+            const userInfo = {
+                email: data?.user?.email,
+                name: data?.user?.displayName,
+            }
+            fetch("http://localhost:5000/user",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(userInfo)
+            }).then((data) => console.log(data))
+        }
+    })
   }
   return (
     <button onClick={handleGoogleSingIn} className='btn w-full'>

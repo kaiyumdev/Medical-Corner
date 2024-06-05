@@ -24,7 +24,9 @@ const Registrations = () => {
         setPassMatch(false)
     }
     if(password === confirm_password){
-      createUser(email, password)
+      createUser(email, password).then((data) => {
+   
+      })
     }
     console.log(name, email, password, confirm_password)
   }
