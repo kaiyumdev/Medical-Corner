@@ -13,7 +13,7 @@ const GithubLogin = () => {
                 email: data?.user?.email,
                 name: data?.user?.displayName,
             }
-            fetch("http://localhost:5000/user",{
+            fetch("https://medical-corner-server.vercel.app/user",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -22,7 +22,7 @@ const EditService = () => {
         const description = form.description.value;
         const image = form.image.value;
         const data = {title, name, description, image }
-        await fetch(`http://localhost:5000/services/${editService._id}`, {
+        await fetch(`https://medical-corner-server.vercel.app/services/${editService._id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json", 

@@ -22,7 +22,7 @@ const EditProfile = () => {
       };
   
       fetch(
-        `http://localhost:5000/user/${data?.email}`,
+        `https://medical-corner-server.vercel.app/user/${data?.email}`,
         {
           method: "PATCH",
           headers: {

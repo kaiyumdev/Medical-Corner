@@ -7,7 +7,7 @@ const SingleService = ({service, onDelete}) => {
 
     const handleDelete = async() => {
       // alert("Ary you want to delete this?")
-      await fetch(`http://localhost:5000/services/${_id}`, {
+      await fetch(`https://medical-corner-server.vercel.app/services/${_id}`, {
         method:"DELETE",
         headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
       }).then((res) => res.json()).then((data) => {
