@@ -25,6 +25,7 @@ const Registrations = () => {
     }
     if(password === confirm_password){
       createUser(email, password).then((data) => {
+        console.log(data)
         if(data?.user?.email){
             const userInfo = {
                 email: data?.user?.email,

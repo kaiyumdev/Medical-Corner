@@ -6,6 +6,7 @@ const GoogleLogin = () => {
   const {googleLogin} = useAuth();
   const handleGoogleSingIn = () => {
     googleLogin().then((data) => {
+      console.log(data)
         if(data?.user?.displayName){
             const userInfo = {
                 email: data?.user?.email,

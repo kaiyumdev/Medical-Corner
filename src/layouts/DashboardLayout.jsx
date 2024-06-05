@@ -1,24 +1,18 @@
 import { Link, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+// import Profile from "../pages/Profile/Profile";
 
 const DashboardLayout = () => {
-  const {user} = useAuth()
+  const { user } = useAuth()
   return (
     <div className="grid grid-cols-12">
       <div className="col-span-2 bg-customLightBlue min-h-screen p-12">
         <ul>
-        <li className="border border-black p-4 text w-full flex-col items-center">
-        <div className="avatar">
-                    <div className="w-12 rounded-full border-2 border-black">
-                      <img src={user?.photoURL || "/public/placeholder.jpg"} />
-                    </div>
-                  </div>
-            <Link to={""}>
-              
-
-                  Profile
+          {/* <li className="border border-black p-4 text w-full flex-col items-center">
+            <Link to={"/dashboard/profile"}>
+              <Profile></Profile>
             </Link>
-          </li>
+          </li> */}
           <li className="border border-black p-4 text w-full">
             <Link to={""}>Dashboard</Link>
           </li>
