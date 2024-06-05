@@ -21,7 +21,7 @@ const AllServices = () => {
     {/* <ToastContainer /> */}
     </div>
     {
-        services?.map((service) => <SingleService key={service.id} service={service} onDelete={handleDeleteService}></SingleService>)
+        services?.map((service) => <SingleService key={service._id} service={service} onDelete={handleDeleteService}></SingleService>)
     }
     <div>
    

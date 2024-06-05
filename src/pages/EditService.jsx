@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 const EditService = () => {
     const editService = useLoaderData()
+    console.log(editService)
 
-    const [id, setId] = useState(editService.id)
     const [title, setTitle] = useState(editService.title)
     const [name, setName] = useState(editService.name)
     const [description, setDescription] = useState(editService.description)
@@ -14,19 +15,18 @@ const EditService = () => {
         e.preventDefault()
         // alert("Are you want to Edit shoe")
         const form = e.target;
-        const id = form.id.value;
         const title = form.title.value;
         const name = form.name.value;
         const description = form.description.value;
         const image = form.image.value;
-        const data = {id, title, name, description, image }
-        await fetch(`http://localhost:3000/services/${editService.id}`, {
+        const data = {title, name, description, image }
+        await fetch(`http://localhost:5000/services/${editService._id}`, {
             method: "PATCH",
-            headers: { "Content-type": "application/json" },
+            headers: {"Content-type": "application/json"},
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {
             console.log(data)
-            // toast("Edit shoes successfully!");
+            toast("Edit shoes successfully!");
         })
     }
     return (
@@ -34,9 +34,6 @@ const EditService = () => {
             <h1 className='text-5xl font-bold text-center'>Edit Product</h1>
             <div className='my-16'>
                 <form onSubmit={handleSubmit}>
-                    <div className='mt-2'>
-                        <input className='bg-gray-100 p-4 w-full border border-black rounded-lg ' value={id} onChange={(e) => setId(e.target.value)} type="text" name="id" id="" placeholder='id' />
-                    </div>
                     <div className='mt-2'>
                         <input className='bg-gray-100 p-4 w-full border border-black rounded-lg ' value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" id="" placeholder='title' />
                     </div>
@@ -52,7 +49,7 @@ const EditService = () => {
                     <div className='mt-2 flex justify-center items-center'>
                         <input className='btn mt-4 w-full' type="submit" value="Edit Service" />
                     </div>
-                    {/* <ToastContainer /> */}
+                    <ToastContainer />
                 </form>
             </div>
         </div>
