@@ -74,15 +74,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/allServices",
-                element: <AllServices></AllServices>
+                element: <PrivateRoute><AllServices></AllServices></PrivateRoute>
             },
             {
                 path: "/dashboard/addService",
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: "/dashboard/allService/edit/:id",
-                element: <EditService></EditService>,
+                element:<PrivateRoute> <EditService></EditService></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
             }
         ]
