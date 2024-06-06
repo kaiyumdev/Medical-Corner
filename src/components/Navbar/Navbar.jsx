@@ -48,7 +48,7 @@ const Navbar = () => {
                             Logout
                         </button>
                         <div className="avatar">
-                            <div className="w-12 rounded-full border-2 border-black">
+                            <div className="w-12 rounded-full border-2 border-black cursor-pointer">
                                 <img src={user?.photoURL || "/public/placeholder.jpg"} alt="User Avatar" />
                             </div>
                         </div>
