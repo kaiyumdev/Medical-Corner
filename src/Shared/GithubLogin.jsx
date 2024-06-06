@@ -5,7 +5,6 @@ import useAuth from '../hooks/useAuth';
 const GithubLogin = () => {
   const {githubLogin} = useAuth();
   const handleGoogleSingIn = () => {
-    const token = localStorage.getItem('token')
     githubLogin()
     .then((data) => {
       console.log(data)
@@ -15,16 +14,18 @@ const GithubLogin = () => {
                 name: data?.user?.displayName,
             }
             fetch("https://medical-corner-server.onrender.com/user",{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Auhthorization: `Bearer ${token}`
-                },
-                body: JSON.stringify(userInfo)
-            }).then((data) => console.log(data))
-        }
-    })
-  }
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(userInfo)
+        }).then((res) => res.json())
+        .then((data) => {
+          localStorage.setItem("token", data?.token);
+        });
+      }
+  })
+}
   return (
     <button onClick={handleGoogleSingIn} className='btn w-full'>
        <div className='flex items-center gap-2'>

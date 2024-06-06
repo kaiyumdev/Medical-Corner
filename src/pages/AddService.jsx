@@ -14,7 +14,7 @@ const AddService = () => {
 
         await fetch("https://medical-corner-server.onrender.com/services", {
             method: "POST",
-            headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
+            headers:{ "Content-type": "application/json",  authorization: `Bearer ${token}`},
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {
             console.log(data)

@@ -26,7 +26,7 @@ const EditService = () => {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json", 
-                Auhthorization: `Bearer ${token}`
+                authorization: `Bearer ${token}`
             },
             body: JSON.stringify(data)
         }).then((res) => res.json()).then((data) => {

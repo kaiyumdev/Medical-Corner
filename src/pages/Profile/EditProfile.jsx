@@ -25,7 +25,7 @@ const EditProfile = () => {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            Auhthorization: `Bearer ${token}`
+            authorization: `Bearer ${token}`
             
           },
           body: JSON.stringify(userData),

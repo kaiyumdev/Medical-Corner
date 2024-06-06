@@ -9,7 +9,7 @@ const SingleService = ({service, onDelete}) => {
       // alert("Ary you want to delete this?")
       await fetch(`https://medical-corner-server.onrender.com/services/${_id}`, {
         method:"DELETE",
-        headers:{ "Content-type": "application/json",  Auhthorization: `Bearer ${token}`},
+        headers:{ "Content-type": "application/json",  authorization: `Bearer ${token}`},
       }).then((res) => res.json()).then((data) => {
         console.log(data)
         onDelete(_id)
