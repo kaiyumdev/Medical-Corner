@@ -17,6 +17,7 @@ import EditService from "../pages/EditService"
 import Profile from "../pages/Profile/Profile";
 import EditProfile from "../pages/Profile/EditProfile";
 
+//updated routes
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -31,8 +32,8 @@ export const router = createBrowserRouter([
             {
                 path: "/services/:id",
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
-              },
+                loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
+            },
             {
                 path: "/about",
                 element: <About></About>
@@ -70,7 +71,7 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/profile/edit/:id",
                 element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>,
-                loader: ({params}) => fetch(`https://medical-corner-server.onrender.com/user/get/${params.id}`)
+                loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com/user/get/${params.id}`)
             },
             {
                 path: "/dashboard/allServices",
@@ -82,7 +83,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/allService/edit/:id",
-                element:<PrivateRoute> <EditService></EditService></PrivateRoute>,
+                element: <PrivateRoute> <EditService></EditService></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://medical-corner-server.onrender.com/services/${params.id}`)
             }
         ]
